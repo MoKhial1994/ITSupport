@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/* Theme Base & Overrides for Dark / Light Modes                              */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: dark;
+}
+
+/* Dark Mode Defaults (Visual Studio / WPF Dark Theme) */
+.dark-mode {
+  --bg-app: #1e1e1e;
+  --bg-panel: #252526;
+  --bg-sidebar: #252526;
+  --bg-card: #252526;
+  --bg-hover: #2d2d30;
+  --bg-input: #181818;
+  --border-color: #3f3f46;
+  --border-subtle: #333333;
+  --text-primary: #e0e0e0;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+}
+
+/* Light Mode Overrides (Visual Studio / WPF Clean Light Theme) */
+.light-mode {
+  color-scheme: light;
+  --bg-app: #f8fafc;
+  --bg-panel: #ffffff;
+  --bg-sidebar: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-hover: #f1f5f9;
+  --bg-input: #ffffff;
+  --border-color: #e2e8f0;
+  --border-subtle: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+}
+
+/* Background overrides in Light Mode */
+.light-mode .bg-\[\#1E1E1E\],
+.light-mode .bg-\[\#1e1e1e\],
+.light-mode main.bg-\[\#1E1E1E\] {
+  background-color: #f8fafc !important;
+}
+
+.light-mode .bg-\[\#252526\],
+.light-mode aside.bg-\[\#252526\] {
+  background-color: #ffffff !important;
+}
+
+.light-mode .bg-\[\#2D2D30\],
+.light-mode .bg-\[\#2d2d30\] {
+  background-color: #f1f5f9 !important;
+}
+
+.light-mode .bg-\[\#181818\] {
+  background-color: #f8fafc !important;
+}
+
+.light-mode .bg-\[\#1E1E1E\]\/50,
+.light-mode .bg-\[\#1E1E1E\]\/40 {
+  background-color: #f1f5f9 !important;
+}
+
+.light-mode .bg-\[\#333333\] {
+  background-color: #e2e8f0 !important;
+}
+
+.light-mode .bg-\[\#3E3E42\] {
+  background-color: #cbd5e1 !important;
+}
+
+.light-mode .hover\:bg-\[\#2D2D30\]:hover,
+.light-mode .hover\:bg-\[\#2A2A2D\]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.light-mode .hover\:bg-\[\#3E3E42\]:hover {
+  background-color: #cbd5e1 !important;
+}
+
+.light-mode .hover\:bg-\[\#333333\]:hover {
+  background-color: #e2e8f0 !important;
+}
+
+/* Border overrides in Light Mode */
+.light-mode .border-\[\#3F3F46\],
+.light-mode .border-\[\#3f3f46\],
+.light-mode .border-\[\#333333\] {
+  border-color: #e2e8f0 !important;
+}
+
+.light-mode .border-\[\#555555\] {
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode .divide-\[\#3F3F46\] > :not([hidden]) ~ :not([hidden]),
+.light-mode .divide-\[\#333333\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e2e8f0 !important;
+}
+
+/* Text overrides in Light Mode */
+.light-mode {
+  color: #0f172a;
+}
+
+.light-mode .text-\[\#E0E0E0\],
+.light-mode .text-\[\#e0e0e0\],
+.light-mode .text-\[\#D4D4D4\],
+.light-mode .text-\[\#d4d4d4\] {
+  color: #0f172a !important;
+}
+
+.light-mode .text-\[\#CCCCCC\],
+.light-mode .text-\[\#cccccc\],
+.light-mode .text-\[\#AAAAAA\],
+.light-mode .text-\[\#aaaaaa\] {
+  color: #334155 !important;
+}
+
+.light-mode .text-\[\#888888\],
+.light-mode .text-\[\#9CA3AF\] {
+  color: #64748b !important;
+}
+
+/* Headings and card titles in Light Mode */
+.light-mode h1.text-white,
+.light-mode h2.text-white,
+.light-mode h3.text-white,
+.light-mode h4.text-white,
+.light-mode h5.text-white,
+.light-mode h6.text-white,
+.light-mode span.text-white:not(.bg-\[\#007ACC\] *):not(button.bg-\[\#007ACC\] *),
+.light-mode p.text-white,
+.light-mode div.text-white:not(.bg-\[\#007ACC\] *):not(button *) {
+  color: #0f172a !important;
+}
+
+/* Minimized card headers & containers in Light Mode */
+.light-mode [id^="query-card-min-"],
+.light-mode [id^="note-card-min-"] {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.light-mode [id^="query-card-min-"]:hover,
+.light-mode [id^="note-card-min-"]:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #94a3b8 !important;
+}
+
+.light-mode [id^="query-card-min-"] h4,
+.light-mode [id^="note-card-min-"] h4 {
+  color: #0f172a !important;
+}
+
+.light-mode [id^="query-card-min-"] h4:hover {
+  color: #0284c7 !important;
+}
+
+.light-mode [id^="note-card-min-"] h4:hover {
+  color: #d97706 !important;
+}
+
+/* Inputs & Textareas in Light Mode */
+.light-mode input:not([type="checkbox"]):not([type="radio"]),
+.light-mode textarea,
+.light-mode select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Retain white text for solid action buttons and badges */
+.light-mode button.bg-\[\#007ACC\],
+.light-mode button.bg-\[\#007ACC\] *,
+.light-mode button.bg-blue-600,
+.light-mode button.bg-blue-600 *,
+.light-mode button.bg-rose-600,
+.light-mode button.bg-rose-600 *,
+.light-mode button.bg-emerald-600,
+.light-mode button.bg-emerald-600 *,
+.light-mode button.bg-amber-600,
+.light-mode button.bg-amber-600 *,
+.light-mode button.bg-purple-600,
+.light-mode button.bg-purple-600 * {
+  color: #ffffff !important;
+}
+
+.light-mode footer.bg-\[\#007ACC\],
+.light-mode footer.bg-\[\#007ACC\] * {
+  color: #ffffff !important;
+}
+
+/* Code Preview boxes in Light Mode */
+.light-mode .bg-\[\#181818\].font-mono,
+.light-mode pre.bg-\[\#181818\],
+.light-mode pre.bg-\[\#1E1E1E\] {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light-mode .bg-\[\#181818\].font-mono span.text-\[\#D4D4D4\],
+.light-mode pre.bg-\[\#181818\] span.text-\[\#D4D4D4\],
+.light-mode pre.bg-\[\#181818\] span.text-\[\#CCCCCC\] {
+  color: #1e293b !important;
+}
+
+/* Modals backdrop & container */
+.light-mode .fixed.inset-0.bg-black\/70,
+.light-mode .fixed.inset-0.bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+.light-mode ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.light-mode ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

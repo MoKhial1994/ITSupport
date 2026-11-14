@@ -1,0 +1,6 @@
+{
+  "name": "IT Support & Database Utility Toolkit",
+  "description": "Production-ready IT Support & Database Utility Toolkit featuring JSON Formatter & Validator (prettify, minify, auto-repair loose syntax, key sorting), Notes Bank & Quick Cheatsheets, SQL Query Bank, Support SOPs, JWT Token Deserializer, Database Explorer, Delete Plots Generator, List Formatter, System Diagnostics, and .NET 8 WPF C# Solution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
